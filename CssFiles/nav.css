@@ -32,11 +32,11 @@ body{
 }
 
 @keyframes slider{
-    0% {backgroud-image : url("img/1.jpg");}
-    25% {backgroud-image : url("img/1.jpg");}
-    50% {backgroud-image : url("img/1.jpg");}
-    75% {backgroud-image : url("img/1.jpg");}
-    100% {backgroud-image : url("img/1.jpg");}
+    0% {backgroud-image : url("../Images/img1.jpg");}
+    25% {backgroud-image : url("../Images/img2.jpg");}
+    50% {backgroud-image : url("../Images/img3.jpg");}
+    75% {backgroud-image : url("../Images/img4.jpg");}
+    100% {backgroud-image : url("../Images/img5.jpg");}
 }
 /* Content */
 .content {
