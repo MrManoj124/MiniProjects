@@ -1,4 +1,4 @@
-﻿const tabButtons = document.querySelectorAll(".tab-btn");
+const tabButtons = document.querySelectorAll(".tab-btn");
 const panels = document.querySelectorAll(".tool-panel");
 
 tabButtons.forEach((btn) => {
@@ -246,3 +246,4 @@ convType.addEventListener("change", () => {
 
 fillUnitSelects("length");
 updateConversion();
+

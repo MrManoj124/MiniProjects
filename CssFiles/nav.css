@@ -1,4 +1,4 @@
-﻿:root {
+:root {
     --bg: #e9f1ff;
     --panel: #ffffff;
     --ink: #1f2937;
@@ -188,3 +188,4 @@ body {
         gap: 0.35rem;
     }
 }
+
