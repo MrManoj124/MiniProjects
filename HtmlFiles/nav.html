@@ -1,36 +1,102 @@
-<!DOCTYPE html>
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shoe Brands</title>
+    <title>Mastery Tools</title>
     <link rel="stylesheet" href="../CssFiles/nav.css">
 </head>
 <body>
-    <div class="container">
-        <div class="slider"></div>
-        <div class="content">
-            <h1>Shoe Brand</h1>
-            <p>
-                Experience the Smoothness and comfort in one place.
-                Get a permiem look with low cost.
-            </p>
-            <div class="specification">
-                <div><strong>Material :</strong>lether</div>
-                <div><strong>Size :</strong>Flexible</div>
-                <div><strong>Usage :</strong>Casuals</div>
-                <div><strong>Durability</strong>Minimum 5 years</div>
+    <main class="app-shell">
+        <header class="app-header">
+            <h1>Mastery Tools</h1>
+            <p>Scientific Calculator, Stopwatch, and Measurement Converter in one app.</p>
+        </header>
+
+        <nav class="tabs" aria-label="Tools navigation">
+            <button class="tab-btn active" data-tab="calculator">Scientific Calculator</button>
+            <button class="tab-btn" data-tab="stopwatch">Stopwatch</button>
+            <button class="tab-btn" data-tab="converter">Measurements</button>
+        </nav>
+
+        <section class="tool-panel active" id="calculator">
+            <div class="display-wrap">
+                <input id="calcDisplay" type="text" value="0" readonly>
             </div>
-            <div class="buttons">
-                <button class="btn cart">Add to Cart</button>
-                <button class="btn checkout">CheckOut</button>
+            <div class="calc-grid">
+                <button class="action" data-action="clear">AC</button>
+                <button class="action" data-action="delete">DEL</button>
+                <button data-value="(">(</button>
+                <button data-value=")">)</button>
+
+                <button data-value="sin(" class="func">sin</button>
+                <button data-value="cos(" class="func">cos</button>
+                <button data-value="tan(" class="func">tan</button>
+                <button data-value="/" class="op">/</button>
+
+                <button data-value="7">7</button>
+                <button data-value="8">8</button>
+                <button data-value="9">9</button>
+                <button data-value="*" class="op">*</button>
+
+                <button data-value="4">4</button>
+                <button data-value="5">5</button>
+                <button data-value="6">6</button>
+                <button data-value="-" class="op">-</button>
+
+                <button data-value="1">1</button>
+                <button data-value="2">2</button>
+                <button data-value="3">3</button>
+                <button data-value="+" class="op">+</button>
+
+                <button data-value="log(" class="func">log</button>
+                <button data-value="ln(" class="func">ln</button>
+                <button data-value="sqrt(" class="func">sqrt</button>
+                <button data-action="square" class="func">x²</button>
+
+                <button data-value="PI" class="func">pi</button>
+                <button data-value="E" class="func">e</button>
+                <button data-value=".">.</button>
+                <button data-action="equals" class="equals">=</button>
             </div>
-        </div>
-    </div>
+        </section>
+
+        <section class="tool-panel" id="stopwatch">
+            <div class="stopwatch-time" id="timeDisplay">00:00:00.00</div>
+            <div class="sw-controls">
+                <button id="startBtn">Start</button>
+                <button id="pauseBtn">Pause</button>
+                <button id="resetBtn">Reset</button>
+                <button id="lapBtn">Lap</button>
+            </div>
+            <ul id="laps"></ul>
+        </section>
+
+        <section class="tool-panel" id="converter">
+            <div class="conv-row">
+                <label for="convType">Type</label>
+                <select id="convType">
+                    <option value="length">Length</option>
+                    <option value="weight">Weight</option>
+                    <option value="temperature">Temperature</option>
+                </select>
+            </div>
+            <div class="conv-row">
+                <label for="fromUnit">From</label>
+                <select id="fromUnit"></select>
+            </div>
+            <div class="conv-row">
+                <label for="toUnit">To</label>
+                <select id="toUnit"></select>
+            </div>
+            <div class="conv-row">
+                <label for="convInput">Value</label>
+                <input type="number" id="convInput" value="1" step="any">
+            </div>
+            <div class="result-box" id="convResult">Result: 1</div>
+        </section>
+    </main>
+
     <script src="../JsFiles/nav.js"></script>
-    
 </body>
 </html>
-
-
